@@ -1,4 +1,4 @@
-* My latex writing templates for org-mode
+* My org-mode templates for latex-style writing
 
 This repo contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.
 
@@ -6,7 +6,7 @@ This repo contains different templates as a starter code to write org-mode which
 * Emacs settings
 
 I am using [[https://github.com/seagle0128/.emacs.d][Centaur Emacs]] for my emacs setting,
-so if you encounter any different exporting result, please refer to the emacs setting or my [[https://github.com/GeneKao/.emacs.d][fork]] version.
+so if you encounter any different exporting result, please refer to the emacs setting and my [[https://github.com/GeneKao/.emacs.d][fork]] version (in the branch *gene-emacs*).
 
 * Export from .org file to .pdf
 

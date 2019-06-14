@@ -31,17 +31,13 @@
 #+LaTeX_HEADER: \usepackage{tikz}
 #+LaTeX_HEADER: \usetikzlibrary{arrows,automata, quotes}
 #+LaTeX_HEADER: \usepackage[latin1]{inputenc}
-#+OPTIONS: toc:nil
 
+#+OPTIONS: toc:nil
 \begin{abstract}
 
 This is the abstract.
 
 \end{abstract}
-
-
-
-
 #+TOC: headlines 3
 
 
