@@ -1,4 +1,4 @@
-#+TITLE:     Title
+#+TITLE:     Thesis Title
 #+SUBTITLE:  subtitles
 #+AUTHOR:    Your name
 #+EMAIL:     your email address
@@ -6,8 +6,8 @@
 #+DESCRIPTION: my org-mode to latex templates
 #+KEYWORDS:  latex, org-mode, writing
 #+LANGUAGE:  en
-#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t ^:nil _:nil
-#+OPTIONS:   H:3 num:nil
+#+OPTIONS:   H:3 num:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t ^:nil _:nil
+#+OPTIONS:   H:3 num:3
 #+STARTUP:   showall
 #+STARTUP:   align
 #+latex_class: article
@@ -46,7 +46,7 @@ this is a placeholder
 
 * State of the art
 
-this is a placeholder
+this is a placeholder, \cite{kao2017assembly}
 
 * Thesis statement
 
@@ -58,7 +58,12 @@ this is a placeholder
 
 * Methodologies
 
+** method 1
 this is a placeholder
+
+** method 2
+this is a placeholder
+
 
 * Expected results
 
