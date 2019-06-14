@@ -1,0 +1,146 @@
+#+TITLE:     How to write in orgm-ode and export to pdf
+#+SUBTITLE:  simple template
+#+AUTHOR:    Gene Ting-Chun Kao
+#+EMAIL:     kao.gene@gmail.com
+#+DATE:      {{{time(%Y-%m-%d)}}}
+#+DESCRIPTION: my org-mode to latex templates
+#+KEYWORDS:  latex, org-mode, writing
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t ^:nil _:nil
+#+OPTIONS:   H:3 num:nil
+#+STARTUP:   showall
+#+STARTUP:   align
+#+latex_class: article
+#+latex_class_options: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage[table]{xcolor}
+#+LATEX_HEADER: \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+#+LATEX_HEADER: \usepackage{algorithm2e}
+#+LATEX_HEADER: \usepackage{algorithm}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{arydshln}
+#+LATEX_HEADER: \usepackage{subcaption}
+#+LaTeX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
+#+LATEX_HEADER: \addbibresource{org-bib-refs.bib}
+#+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+#+LaTeX_HEADER: \usepackage{hyperref}
+#+LaTeX_HEADER: \usepackage{csquotes}
+#+LaTeX_HEADER: \usepackage[mla]{ellipsis}
+#+LaTeX_HEADER: \parindent = 0em
+#+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}
+#+LaTeX_HEADER: \usepackage{pgf}
+#+LaTeX_HEADER: \usepackage{tikz}
+#+LaTeX_HEADER: \usetikzlibrary{arrows,automata, quotes}
+#+LaTeX_HEADER: \usepackage[latin1]{inputenc}
+
+
+* Section title
+
+This is a placeholder for writing contents
+
+
+** Image
+
+This is an how we can refer to an image, see figure [[fig:leopard-icon]].
+
+#+caption: Leopard icon
+#+NAME:   fig:leopard-icon
+#+ATTR_LATEX: :width 0.4\textwidth :placement
+[[./images/Leopard-ICON-circle.png]]
+
+** Table
+
+| Author             | Email                | Institution-ID |
+|--------------------+----------------------+----------------|
+| Gene Ting-Chun Kao | your.email@email.edu |              1 |
+| Your name          |                      |              2 |
+| another name       |                      |              3 |
+
+
+
+* Section title
+
+** Mathematics in latex
+
+#+NAME: eqn:mls
+#+begin_latex
+\begin{equation}
+f(x) = {s_0} = \frac{{\sum\limits_i {n_i^T(x - {x_i}){\Phi _i}(x)} }}{{\sum\limits_i {{\Phi _i}(x)} }}
+\end{equation}
+#+end_latex
+
+
+** Graph
+
+
+#+NAME:   fig:step-result
+#+ATTR_LATEX: :width 1\textwidth :placement
+#+begin_latex
+\begin{figure}[H]
+\caption{Max flow min cut, max flow = 19}
+\vspace*{5mm}
+\centering
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick,
+xs/.style = {xshift=#1 mm},
+ys/.style = {yshift=#1 mm},
+every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
+                            inner sep=2pt, font=\footnotesize}
+                        ]
+  \tikzstyle{every state}=[fill=black,draw=none,text=white]
+
+  \node[state]         (A)                    {$Source$};
+  \node[state]         (B) [above right of=A] {$n_0$};
+  \node[state]         (C) [right of=A]       {$n_1$};
+  \node[state]         (D) [below right of=A] {$n_2$};
+  \node[state]         (E) [right of=C]       {$Sink$};
+
+  \path (A) edge                            node {9} (B)
+            edge [color=blue]               node {7} (C)
+            edge [color=blue]               node {5} (D)
+        (B) edge [color=blue]               node {4} (E)
+            edge [color=blue, bend left=10] node {3} (C)
+        (C) edge [bend left=10]             node {5} (D)
+            edge [bend left=10]             node {2} (B)
+            edge                            node {7} (E)
+        (D) edge [bend left=10]             node {1} (C)
+            edge                            node {8} (E);
+\draw[rounded corners=10mm, red, densely dashed]
+    ( [xs=-10] D.west)  -- ( [xs=-10] C.west) -- ( [ys=10] C.north) -- ([ys=20] E.north);
+
+\end{tikzpicture}
+\end{figure}
+#+end_latex
+
+
+** Algorithm
+
+#+NAME: algorithm:bnb
+\begin{algorithm}[H]
+\SetAlgoLined
+ \KwData{Initial bounding-box $Q_0$ for $\Theta$, $QBest = Q_0$, $delta = 3$, stack $\Omega  = \{ {Q_0}\}$ }
+ \KwResult{Optimal Q^* = QBest \in \Omega }
+ \While{U_k - L_k > 1}{
+           Pop $Q_k \in \Omega$  \\
+           Prune $\Omega$ if current node is impossible solution node \\
+           Compare $L_k$ from $Q_k$ and $QBest$ \\
+           \If{$Q_{k}.L_k > QBest.L_k$}{
+                     $QBest = Q_k$
+           }
+           Split $Q$ into $Q_I$ and $Q_{II}$ \\
+           Find best condidate from $Q_I$ and $Q_{II}$ and add them to stack $\Omega$
+ }
+ \caption{How to write algorithms}
+\end{algorithm}
+
+
+** Citation
+
+This is how we can cite paper \cite{kao2017assembly}
+
+
+
+#+BEGIN_COMMENT
+References
+#+END_COMMENT
+
+\printbibliography

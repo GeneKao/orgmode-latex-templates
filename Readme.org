@@ -1,0 +1,19 @@
+* My latex writing templates for org-mode
+
+This repo contains different templates as a starter code to write org-mode which can later exported to latex and pdf.
+
+
+* Emacs settings
+
+I am using [[https://github.com/seagle0128/.emacs.d][Centaur Emacs]] for my emacs setting,
+so if you encounter any different exporting result, please refer to the emacs setting or my [[https://github.com/GeneKao/.emacs.d][fork]] version.
+
+* Export from .org file to .pdf
+
+Use the key combination
+
+#+BEGIN_SRC lisp
+C-c C-e l o
+#+END_SRC
+
+For more information, please refer to the [[https://orgmode.org/guide/LaTeX-and-PDF-export.html][official documentation]].

@@ -1,0 +1,76 @@
+#+TITLE:     Title
+#+SUBTITLE:  subtitles
+#+AUTHOR:    Your name
+#+EMAIL:     your email address
+#+DATE:      {{{time(%Y-%m-%d)}}}
+#+DESCRIPTION: my org-mode to latex templates
+#+KEYWORDS:  latex, org-mode, writing
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t ^:nil _:nil
+#+OPTIONS:   H:3 num:nil
+#+STARTUP:   showall
+#+STARTUP:   align
+#+latex_class: article
+#+latex_class_options: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage[table]{xcolor}
+#+LATEX_HEADER: \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+#+LATEX_HEADER: \usepackage{algorithm2e}
+#+LATEX_HEADER: \usepackage{algorithm}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{arydshln}
+#+LATEX_HEADER: \usepackage{subcaption}
+#+LaTeX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
+#+LATEX_HEADER: \addbibresource{org-bib-refs.bib}
+#+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+#+LaTeX_HEADER: \usepackage{hyperref}
+#+LaTeX_HEADER: \usepackage{csquotes}
+#+LaTeX_HEADER: \usepackage[mla]{ellipsis}
+#+LaTeX_HEADER: \parindent = 0em
+#+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}
+#+LaTeX_HEADER: \usepackage{pgf}
+#+LaTeX_HEADER: \usepackage{tikz}
+#+LaTeX_HEADER: \usetikzlibrary{arrows,automata, quotes}
+#+LaTeX_HEADER: \usepackage[latin1]{inputenc}
+
+
+
+
+* Abstract
+
+this is a placeholder
+
+* Introduction
+
+this is a placeholder
+
+
+* State of the art
+
+this is a placeholder
+
+* Thesis statement
+
+this is a placeholder
+
+* Research objectives
+
+this is a placeholder
+
+* Methodologies
+
+this is a placeholder
+
+* Expected results
+
+this is a placeholder
+
+* Conculsion
+
+this is a placeholder
+
+
+#+BEGIN_COMMENT
+References
+#+END_COMMENT
+
+\printbibliography
