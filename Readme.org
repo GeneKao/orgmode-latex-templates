@@ -1,6 +1,6 @@
 * My latex writing templates for org-mode
 
-This repo contains different templates as a starter code to write org-mode which can later exported to latex and pdf.
+This repo contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.
 
 
 * Emacs settings

@@ -1,0 +1,172 @@
+% Created 2019-06-14 Fri 14:11
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+\usepackage{algorithm2e}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{arydshln}
+\usepackage{subcaption}
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\addbibresource{org-bib-refs.bib}
+\newcommand{\point}[1]{\noindent \textbf{#1}}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[mla]{ellipsis}
+\parindent = 0em
+\setlength\parskip{.5\baselineskip}
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata, quotes}
+\usepackage[latin1]{inputenc}
+\author{Gene Ting-Chun Kao}
+\date{2019-06-14}
+\title{How to write in orgm-ode and export to pdf\\\medskip
+\large simple template}
+\hypersetup{
+ pdfauthor={Gene Ting-Chun Kao},
+ pdftitle={How to write in orgm-ode and export to pdf},
+ pdfkeywords={latex, org-mode, writing},
+ pdfsubject={my org-mode to latex templates},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+
+\section*{Section title}
+\label{sec:org5ff6ff3}
+
+This is a placeholder for writing contents
+
+
+\subsection*{Image}
+\label{sec:orgf934939}
+
+This is an how we can refer to an image, see figure \ref{fig:orge9a40b7}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{./images/Leopard-ICON-circle.png}
+\caption{\label{fig:orge9a40b7}
+Leopard icon}
+\end{figure}
+
+\subsection*{Table}
+\label{sec:org6f063d7}
+
+\begin{center}
+\begin{tabular}{llr}
+Author & Email & Institution-ID\\
+\hline
+Gene Ting-Chun Kao & your.email@email.edu & 1\\
+Your name &  & 2\\
+another name &  & 3\\
+\end{tabular}
+\end{center}
+
+
+
+\section*{Section title}
+\label{sec:org5b7d095}
+
+\subsection*{Mathematics in latex}
+\label{sec:org908ce83}
+
+\begin{latex}
+\begin{equation}
+f(x) = {s_0} = \frac{{\sum\limits_i {n_i^T(x - {x_i}){\Phi _i}(x)} }}{{\sum\limits_i {{\Phi _i}(x)} }}
+\end{equation}
+\label{orgbbf3c97}
+\end{latex}
+
+
+\subsection*{Graph}
+\label{sec:org4fb7107}
+
+
+\begin{latex}
+\begin{figure}[H]
+\caption{Max flow min cut, max flow = 19}
+\vspace*{5mm}
+\centering
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick,
+xs/.style = {xshift=#1 mm},
+ys/.style = {yshift=#1 mm},
+every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
+                            inner sep=2pt, font=\footnotesize}
+                        ]
+  \tikzstyle{every state}=[fill=black,draw=none,text=white]
+
+  \node[state]         (A)                    {$Source$};
+  \node[state]         (B) [above right of=A] {$n_0$};
+  \node[state]         (C) [right of=A]       {$n_1$};
+  \node[state]         (D) [below right of=A] {$n_2$};
+  \node[state]         (E) [right of=C]       {$Sink$};
+
+  \path (A) edge                            node {9} (B)
+            edge [color=blue]               node {7} (C)
+            edge [color=blue]               node {5} (D)
+        (B) edge [color=blue]               node {4} (E)
+            edge [color=blue, bend left=10] node {3} (C)
+        (C) edge [bend left=10]             node {5} (D)
+            edge [bend left=10]             node {2} (B)
+            edge                            node {7} (E)
+        (D) edge [bend left=10]             node {1} (C)
+            edge                            node {8} (E);
+\draw[rounded corners=10mm, red, densely dashed]
+    ( [xs=-10] D.west)  -- ( [xs=-10] C.west) -- ( [ys=10] C.north) -- ([ys=20] E.north);
+
+\end{tikzpicture}
+\end{figure}
+\label{org7247ee1}
+\end{latex}
+
+
+\subsection*{Algorithm}
+\label{sec:orgdf072e9}
+
+\begin{algorithm}[H]
+\SetAlgoLined
+ \KwData{Initial bounding-box $Q_0$ for $\Theta$, $QBest = Q_0$, $delta = 3$, stack $\Omega  = \{ {Q_0}\}$ }
+ \KwResult{Optimal Q^* = QBest \in \Omega }
+ \While{U_k - L_k > 1}{
+           Pop $Q_k \in \Omega$  \\
+           Prune $\Omega$ if current node is impossible solution node \\
+           Compare $L_k$ from $Q_k$ and $QBest$ \\
+           \If{$Q_{k}.L_k > QBest.L_k$}{
+                     $QBest = Q_k$
+           }
+           Split $Q$ into $Q_I$ and $Q_{II}$ \\
+           Find best condidate from $Q_I$ and $Q_{II}$ and add them to stack $\Omega$
+ }
+ \caption{How to write algorithms}
+\label{orgd86cac4}
+\end{algorithm}
+
+
+\subsection*{Citation}
+\label{sec:org6e861f7}
+
+This is how we can cite paper \cite{kao2017assembly}
+
+
+
+\printbibliography
+\end{document}

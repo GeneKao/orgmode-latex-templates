@@ -1,3 +1,10 @@
+# latex
+*.bbl
+*blx*
+
+
+
+
 # Mac
 
 # General
