@@ -61,20 +61,21 @@ This is an how we can refer to an image, see figure [[fig:leopard-icon]].
 
 ** Mathematics in latex
 
+Check equation [[eqn:mls]].
+
 #+NAME: eqn:mls
-#+begin_latex
 \begin{equation}
 f(x) = {s_0} = \frac{{\sum\limits_i {n_i^T(x - {x_i}){\Phi _i}(x)} }}{{\sum\limits_i {{\Phi _i}(x)} }}
 \end{equation}
-#+end_latex
+
 
 
 ** Graph
 
+Check out the graph in figure [[fig:step-result]].
 
 #+NAME:   fig:step-result
 #+ATTR_LATEX: :width 1\textwidth :placement
-#+begin_latex
 \begin{figure}[H]
 \caption{Max flow min cut, max flow = 19}
 \vspace*{5mm}
@@ -109,7 +110,6 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
 
 \end{tikzpicture}
 \end{figure}
-#+end_latex
 
 
 ** Algorithm

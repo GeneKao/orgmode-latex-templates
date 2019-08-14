@@ -1,20 +1,27 @@
-% Created 2019-06-14 Fri 14:11
+% Created 2019-08-14 Wed 10:34
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
 \usepackage{graphicx}
-\usepackage{grffile}
 \usepackage{longtable}
+\usepackage{float}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
 \usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
 \usepackage{amssymb}
-\usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage[table]{xcolor}
+\usepackage{mathpazo}
+\usepackage{color}
+\usepackage{enumerate}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\tolerance=1000
+            \usepackage[table]{xcolor}
 \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
 \usepackage{algorithm2e}
 \usepackage{algorithm}
@@ -33,8 +40,11 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows,automata, quotes}
 \usepackage[latin1]{inputenc}
+
+\linespread{1.1}
+\hypersetup{pdfborder=0 0 0}
 \author{Gene Ting-Chun Kao}
-\date{2019-06-14}
+\date{2019-08-14}
 \title{How to write in orgm-ode and export to pdf\\\medskip
 \large simple template}
 \hypersetup{
@@ -42,7 +52,7 @@
  pdftitle={How to write in orgm-ode and export to pdf},
  pdfkeywords={latex, org-mode, writing},
  pdfsubject={my org-mode to latex templates},
- pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 26.2 (Org mode 9.1.9)}, 
  pdflang={English}}
 \begin{document}
 
@@ -50,25 +60,25 @@
 
 
 \section*{Section title}
-\label{sec:org5ff6ff3}
+\label{sec:orga9eb49b}
 
 This is a placeholder for writing contents
 
 
 \subsection*{Image}
-\label{sec:orgf934939}
+\label{sec:org7933e6b}
 
-This is an how we can refer to an image, see figure \ref{fig:orge9a40b7}.
+This is an how we can refer to an image, see figure \ref{fig:orgf7ad9dd}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{./images/Leopard-ICON-circle.png}
-\caption{\label{fig:orge9a40b7}
+\caption{\label{fig:orgf7ad9dd}
 Leopard icon}
 \end{figure}
 
 \subsection*{Table}
-\label{sec:org6f063d7}
+\label{sec:org29fa1ac}
 
 \begin{center}
 \begin{tabular}{llr}
@@ -83,24 +93,25 @@ another name &  & 3\\
 
 
 \section*{Section title}
-\label{sec:org5b7d095}
+\label{sec:org845ff2f}
 
 \subsection*{Mathematics in latex}
-\label{sec:org908ce83}
+\label{sec:org79ff18a}
 
-\begin{latex}
+Check equation \ref{eq:org892665d}.
+
 \begin{equation}
+\label{eq:org892665d}
 f(x) = {s_0} = \frac{{\sum\limits_i {n_i^T(x - {x_i}){\Phi _i}(x)} }}{{\sum\limits_i {{\Phi _i}(x)} }}
 \end{equation}
-\label{orgbbf3c97}
-\end{latex}
+
 
 
 \subsection*{Graph}
-\label{sec:org4fb7107}
+\label{sec:orge92f4f3}
 
+Check out the graph in figure \ref{orgaafa18c}.
 
-\begin{latex}
 \begin{figure}[H]
 \caption{Max flow min cut, max flow = 19}
 \vspace*{5mm}
@@ -134,13 +145,12 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
     ( [xs=-10] D.west)  -- ( [xs=-10] C.west) -- ( [ys=10] C.north) -- ([ys=20] E.north);
 
 \end{tikzpicture}
+\label{orgaafa18c}
 \end{figure}
-\label{org7247ee1}
-\end{latex}
 
 
 \subsection*{Algorithm}
-\label{sec:orgdf072e9}
+\label{sec:org202ba96}
 
 \begin{algorithm}[H]
 \SetAlgoLined
@@ -157,12 +167,12 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
            Find best condidate from $Q_I$ and $Q_{II}$ and add them to stack $\Omega$
  }
  \caption{How to write algorithms}
-\label{orgd86cac4}
+\label{org0b4558c}
 \end{algorithm}
 
 
 \subsection*{Citation}
-\label{sec:org6e861f7}
+\label{sec:orgb4c0762}
 
 This is how we can cite paper \cite{kao2017assembly}
 
