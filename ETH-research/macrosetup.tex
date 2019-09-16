@@ -1,0 +1,23 @@
+%% Custom commands
+%% ===============
+
+%% Special characters for number sets, e.g. real or complex numbers.
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\X}{\mathbb{X}}
+
+%% Fixed/scaling delimiter examples (see mathtools documentation)
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+%% Use the alternative epsilon per default and define the old one as \oldepsilon
+\let\oldepsilon\epsilon
+\renewcommand{\epsilon}{\ensuremath\varepsilon}
+
+%% Also set the alternate phi as default.
+\let\oldphi\phi
+\renewcommand{\phi}{\ensuremath{\varphi}}

@@ -1,0 +1,110 @@
+%% Memoir layout setup
+
+%% NOTE: You are strongly advised not to change any of them unless you
+%% know what you are doing.  These settings strongly interact in the
+%% final look of the document.
+
+% Dependencies
+\usepackage{ETHlogo}
+
+% Turn extra space before chapter headings off.
+\setlength{\beforechapskip}{0pt}
+
+\nonzeroparskip
+\parindent=0pt
+\defaultlists
+
+% Chapter style redefinition
+\makeatletter
+
+\if@twoside
+  \pagestyle{Ruled}
+  \copypagestyle{chapter}{Ruled}
+\else
+  \pagestyle{ruled}
+  \copypagestyle{chapter}{ruled}
+\fi
+\makeoddhead{chapter}{}{}{}
+\makeevenhead{chapter}{}{}{}
+\makeheadrule{chapter}{\textwidth}{0pt}
+\copypagestyle{abstract}{empty}
+
+\makechapterstyle{bianchimod}{%
+  \chapterstyle{default}
+  \renewcommand*{\chapnamefont}{\normalfont\Large\sffamily}
+  \renewcommand*{\chapnumfont}{\normalfont\Large\sffamily}
+  \renewcommand*{\printchaptername}{%
+    \chapnamefont\centering\@chapapp}
+  \renewcommand*{\printchapternum}{\chapnumfont {\thechapter}}
+  \renewcommand*{\chaptitlefont}{\normalfont\huge\sffamily}
+  \renewcommand*{\printchaptertitle}[1]{%
+    \hrule\vskip\onelineskip \centering \chaptitlefont\textbf{\vphantom{gyM}##1}\par}
+  \renewcommand*{\afterchaptertitle}{\vskip\onelineskip \hrule\vskip
+    \afterchapskip}
+  \renewcommand*{\printchapternonum}{%
+    \vphantom{\chapnumfont {9}}\afterchapternum}}
+
+% Use the newly defined style
+\chapterstyle{bianchimod}
+
+\setsecheadstyle{\Large\bfseries\sffamily}
+\setsubsecheadstyle{\large\bfseries\sffamily}
+\setsubsubsecheadstyle{\bfseries\sffamily}
+\setparaheadstyle{\normalsize\bfseries\sffamily}
+\setsubparaheadstyle{\normalsize\itshape\sffamily}
+\setsubparaindent{0pt}
+
+% Set captions to a more separated style for clearness
+\captionnamefont{\sffamily\bfseries\footnotesize}
+\captiontitlefont{\sffamily\footnotesize}
+\setlength{\intextsep}{16pt}
+\setlength{\belowcaptionskip}{1pt}
+
+% Set section and TOC numbering depth to subsection
+\setsecnumdepth{subsection}
+%% \settocdepth{subsection}
+\settocdepth{subsubsection}
+
+%% Titlepage adjustments
+\pretitle{\break\break\break\break\vspace{0pt plus 1.7fill}\begin{center}\Huge\sffamily\bfseries}
+\posttitle{\end{center}\par}
+\preauthor{\par\begin{center}\let\and\\\Large\sffamily}
+\postauthor{\end{center}}
+\predate{\par\begin{center}\Large\sffamily}
+\postdate{\end{center}}
+
+\def\@advisors{}
+\newcommand{\advisors}[1]{\def\@advisors{#1}}
+\def\@department{}
+\newcommand{\department}[1]{\def\@department{#1}}
+\def\@thesistype{}
+\newcommand{\thesistype}[1]{\def\@thesistype{#1}}
+
+\renewcommand{\maketitlehooka}{\noindent\ETHlogo[2in]}
+
+\renewcommand{\maketitlehookb}{\vspace{1in}%
+  \par\begin{center}\Large\sffamily\@thesistype\end{center}}
+
+\renewcommand{\maketitlehookd}{%
+  \vfill\par
+  \begin{flushright}
+    \sffamily
+    \@advisors\par
+    \@department, ETH Z\"urich \break
+  \end{flushright}
+}
+
+\checkandfixthelayout
+
+\setlength{\droptitle}{-48pt}
+
+\makeatother
+
+% This defines how theorems should look. Best leave as is.
+\theoremstyle{plain}
+\setlength\theorempostskipamount{0pt}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "thesis"
+%%% End:

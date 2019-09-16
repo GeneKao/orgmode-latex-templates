@@ -1,0 +1,89 @@
+#+AUTHOR:              Gene Ting-Chun Kao
+#+EMAIL:               kao@arch.ethz.ch
+#+DESCRIPTION:         Gene's ETH Research template
+
+#+LATEX_CLASS:         ethz
+#+OPTIONS:             toc:nil title:nil
+
+#+LATEX_HEADER:        \usepackage[OT1]{fontenc}
+#+LATEX_HEADER:        \usepackage[english]{babel}
+#+LATEX_HEADER:        \usepackage[utf8]{inputenc}
+#+LATEX_HEADER:        \usepackage[sc]{mathpazo}
+#+LATEX_HEADER:        \usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+#+LATEX_HEADER:        \usepackage[amsmath,thmmarks]{ntheorem}
+#+LATEX_HEADER:        \usepackage{graphicx}
+#+LATEX_HEADER:        \usepackage{soul}
+#+LATEX_HEADER:        \usepackage{pdfpages}
+#+LATEX_HEADER:        \input{extrapackages}
+#+LATEX_HEADER:        \input{layoutsetup}
+#+LATEX_HEADER:        \input{theoremsetup}
+#+LATEX_HEADER:        \input{macrosetup}
+#+LATEX_HEADER:        \usepackage[linkcolor=black,colorlinks=true,citecolor=black,filecolor=black]{hyperref}
+
+#+LATEX_HEADER:        \hypersetup{colorlinks=true,allcolors=magenta}
+#+LATEX_HEADER:        \usepackage[backend=bibtex,sorting=none]{biblatex}
+#+LATEX_HEADER:        \addbibresource{org-bib-refs.bib}
+
+\title{Title \break \LARGE Subtitle}
+\author{Gene Ting-Chun Kao \break \break \small kao@arch.ethz.ch \break 18-902-049}
+\thesistype{PhD Research Proposal}
+\advisors{Advisors: Prof. Dr. Philippe Block \break block@arch.ethz.ch \break \break \hline Co-supervisor: Prof. Dr. Stelian Coros \break stelian.coros@inf.ethz.ch \break \break \hline Technical advisor: Dr. Tom Van Mele \break van.mele@arch.ethz.ch \break \break \hline}
+\department{Block Research Group \break Institute of Technology in Architecture \break Department of Architecture}
+\date{\small \today}
+
+\begin{document}
+\frontmatter
+
+\begin{titlingpage}
+  \calccentering{\unitlength}
+  \begin{adjustwidth*}{\unitlength-28pt}{-\unitlength-28pt}
+    \maketitle
+  \end{adjustwidth*}
+\end{titlingpage}
+
+
+\begin{abstract}
+
+Abstract
+\end{abstract}
+
+\cleartorecto
+\tableofcontents
+\mainmatter
+
+
+
+* Introduction
+
+
+* State of the art
+
+
+* Thesis statement
+
+
+* Research objective
+
+
+* Methodology
+
+
+* Expected results
+
+
+* Acknowledgment
+
+This research is supported by the NCCR Digital Fabrication, funded by the Swiss National Science Foundation.
+
+
+
+
+
+
+
+
+\backmatter
+\printbibliography
+
+
+\end{document}

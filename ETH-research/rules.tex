@@ -1,0 +1,283 @@
+\chapter{Writing scientific texts in English}
+
+This chapter was originally a separate document written by Reto
+Spöhel.  It is reprinted here so that the template can serve as a
+quick guide to thesis writing, and to provide some more example
+material to give you a feeling for good typesetting.
+
+% We're going to need an extra theorem-like environment for this
+% chapter
+\theoremstyle{plain}
+\theoremsymbol{}
+\newtheorem{Rule}[theorem]{Rule}
+
+\section{Basic writing rules}
+
+The following rules need little further explanation; they are best
+understood by looking at the example in the booklet by Knuth et al.,
+§2--§3.
+
+\begin{Rule}
+  Write texts, not chains of formulas.
+\end{Rule}
+
+More specifically, write full sentences that are logically
+interconnected by phrases like `Therefore', `However', `On the other
+hand', etc.\ where appropriate.
+
+\begin{Rule}
+  Displayed formulas should be embedded in your text and punctuated
+  with it.
+\end{Rule}
+
+In other words, your writing should not be divided into `text parts'
+and `formula parts'; instead the formulas should be tied together by
+your prose such that there is a natural flow to your writing.
+
+\section{Being nice to the reader}
+
+Try to write your text in such a way that a reader enjoys reading
+it. That's of course a lofty goal, but nevertheless one you should
+aspire to!
+
+\begin{Rule}
+  Be nice to the reader.
+\end{Rule}
+
+Give some intuition or easy example for definitions and theorems which
+might be hard to digest. Remind the reader of notations you introduced
+many pages ago -- chances are he has forgotten them. Illustrate your
+writing with diagrams and pictures where this helps the reader. Etc.
+
+\begin{Rule}
+  Organize your writing.
+\end{Rule}
+
+Think carefully about how you subdivide your thesis into chapters,
+sections, and possibly subsections.  Give overviews at the beginning
+of your thesis and of each chapter, so the reader knows what to
+expect. In proofs, outline the main ideas before going into technical
+details. Give the reader the opportunity to `catch up with you' by
+summing up your findings periodically.
+
+\emph{Useful phrases:} `So far we have shown that \ldots', `It remains
+to show that \ldots', `Recall that we want to prove inequality (7), as
+this will allow us to deduce that \ldots', `Thus we can conclude that
+\ldots. Next, we would like to find out whether \ldots', etc.
+
+\begin{Rule}
+  Don't say the same thing twice without telling the reader that you
+  are saying it twice.
+\end{Rule}
+
+Repetition of key ideas is important and helpful. However, if you
+present the same idea, definition or observation twice (in the same or
+different words) without telling the reader, he will be looking for
+something new where there is nothing new.
+
+\emph{Useful phrases:} `Recall that [we have seen in Chapter 5 that]
+\ldots', `As argued before / in the proof of Lemma 3, \ldots', `As
+mentioned in the introduction, \ldots', `In other words, \ldots', etc.
+
+\begin{Rule}
+  Don't make statements that you will justify later without telling
+  the reader that you will justify them later.
+\end{Rule}
+
+This rule also applies when the justification is coming right in the
+next sentence!  The reasoning should be clear: if you violate it, the
+reader will lose valuable time trying to figure out on his own what
+you were going to explain to him anyway.
+
+\emph{Useful phrases:} `Next we argue that \ldots', `As we shall see,
+\ldots', `We will see in the next section that \ldots, etc.
+
+
+\section{A few important grammar rules}
+
+\begin{Rule}
+  \label{rule:no-comma-before-that}
+  There is (almost) \emph{never} a comma before `that'.
+\end{Rule}
+
+It's really that simple. Examples:
+\begin{quote}
+  We assume that \ldots\\
+  \emph{Wir nehmen an, dass \ldots}
+
+  It follows that \ldots\\
+  \emph{Daraus folgt, dass \ldots}
+
+  `thrice' is a word that is seldom used.\\
+  \emph{`thrice' ist ein Wort, das selten verwendet wird.}
+\end{quote}
+Exceptions to this rule are rare and usually pretty obvious. For
+example, you may end up with a comma before `that' because `i.e.' is
+spelled out as `that is':
+\begin{quote}
+  For \(p(n)=\log n/n\) we have \ldots{} However, if we choose \(p\) a
+  little bit higher, that is \(p(n)=(1+\varepsilon)\log n/n\) for some
+  \(\varepsilon>0\), we obtain that\ldots
+\end{quote}
+Or you may get a comma before `that' because there is some additional
+information inserted in the middle of your sentence:
+\begin{quote}
+  Thus we found a number, namely \(n_0\), that satisfies equation (13).
+\end{quote}
+If the additional information is left out, the sentence has no comma:
+\begin{quote}
+  Thus we found a number that satisfies equation (13).
+\end{quote}
+(For `that' as a relative pronoun, see also
+Rules~\ref{rule:non-defining-has-comma}
+and~\ref{rule:defining-without-comma} below.)
+
+\begin{Rule}
+  There is usually no comma before `if'.
+\end{Rule}
+
+Example:
+\begin{quote}
+  A graph is not \(3\)-colorable if it contains a \(4\)-clique.\\
+  \emph{Ein Graph ist nicht \(3\)-färbbar, wenn er eine \(4\)-Clique
+    enthält.}
+\end{quote}
+However, if the `if' clause comes first, it is usually separated from
+the main clause by a comma:
+\begin{quote}
+  If a graph contains a \(4\)-clique, it is not \(3\)-colorable .\\
+  \emph{Wenn ein Graph eine \(4\)-Clique enthält, ist er nicht
+    \(3\)-färbbar.}
+\end{quote}
+
+There are more exceptions to these rules than to
+Rule~\ref{rule:no-comma-before-that}, which is why we are not
+discussing them here. Just keep in mind: don't put a comma before `if'
+without good reason.
+
+\begin{Rule}
+  \label{rule:non-defining-has-comma}
+  Non-defining relative clauses have commas.
+\end{Rule}
+\begin{Rule}
+  \label{rule:defining-without-comma}
+  Defining relative clauses have no commas.
+\end{Rule}
+
+In English, it is very important to distinguish between two types of
+relative clauses: defining and non-defining ones. This is a
+distinction you absolutely need to understand to write scientific
+texts, because mistakes in this area actually distort the meaning of
+your text!
+
+It's probably easier to explain first what a \emph{non-defining}
+relative clause is. A non-defining relative clauses simply gives
+additional information \emph{that could also be left out} (or given in
+a separate sentence). For example, the sentence
+\begin{quote}
+  The \textsc{WeirdSort} algorithm, which was found by the famous
+  mathematician John Doe, is theoretically best possible but difficult
+  to implement in practice.
+\end{quote}
+would be fully understandable if the relative clause were left out
+completely. It could also be rephrased as two separate sentences:
+\begin{quote}
+  The \textsc{WeirdSort} algorithm is theoretically best possible but
+  difficult to implement in practice. [By the way,] \textsc{WeirdSort}
+  was found by the famous mathematician John Doe.
+\end{quote}
+This is what a non-defining relative clause is. \emph{Non-defining
+  relative clauses are always written with commas.} As a corollary we
+obtain that you cannot use `that' in non-defining relative clauses
+(see Rule~\ref{rule:no-comma-before-that}!). It would be wrong to
+write
+\begin{quote}
+  \st{The \textsc{WeirdSort} algorithm, that was found by the famous
+    mathematician John Doe, is theoretically best possible but
+    difficult to implement in practice.}
+\end{quote}
+A special case that warrants its own example is when `which' is
+referring to the entire preceding sentence:
+\begin{quote}
+  Thus inequality (7) is true, which implies that the Riemann
+  hypothesis holds.
+\end{quote}
+As before, this is a non-defining relative sentence (it could be left
+out) and therefore needs a comma.
+
+So let's discuss \emph{defining} relative clauses next. A defining
+relative clause tells the reader \emph{which specific item the main
+  clause is talking about}. Leaving it out either changes the meaning
+of the sentence or renders it incomprehensible altogether.  Consider
+the following example:
+
+\begin{quote}
+  The \textsc{WeirdSort} algorithm is difficult to implement in
+  practice. In contrast, the algorithm that we suggest is very simple.
+\end{quote}
+
+Here the relative clause `that we suggest' cannot be left out -- the
+remaining sentence would make no sense since the reader would not know
+which algorithm it is talking about. This is what a defining relative
+clause is. \textit{Defining relative clauses are never written with
+  commas.} Usually, you can use both `that' and `which' in defining
+relative clauses, although in many cases `that' sounds better.
+
+As a final example, consider the following sentence:
+\begin{quote}
+  For the elements in \(\mathcal{B}\) which satisfy property (A), we
+  know that equation (37) holds.
+\end{quote}
+This sentence does not make a statement about all elements in
+\(\mathcal{B}\), only about those satisfying property (A). The relative
+clause is \emph{defining}. (Thus we could also use `that' in place of
+`which'.)
+
+In contrast, if we add a comma the sentence reads
+\begin{quote}
+  For the elements in \(\mathcal{B}\), which satisfy property (A), we
+  know that equation (37) holds.
+\end{quote}
+
+Now the relative clause is \emph{non-defining} -- it just mentions in
+passing that all elements in \(\mathcal{B}\) satisfy property (A). The
+main clause states that equation (37) holds for \emph{all} elements in
+\(\mathcal{B}\). See the difference?
+
+
+\section[Things you (usually) don't say in English]%
+{Things you (usually) don't say in English -- and what to say
+  instead}
+\label{sec:list}
+
+Table~\ref{tab:things-you-dont-say} lists some common mistakes and
+alternatives.  The entries should not be taken as gospel -- they don't
+necessarily mean that a given word or formulation is wrong under all
+circumstances (obviously, this depends a lot on the context). However,
+in nine out of ten instances the suggested alternative is the better
+word to use.
+
+\begin{table}
+  \centering
+  \caption{Things you (usually) don't say}
+  \label{tab:things-you-dont-say}
+  \begin{tabular}{lll}
+    \toprule
+    \st{It holds (that) \dots} & We have \dots & \emph{Es gilt \dots}\\
+    \multicolumn{3}{l}{\quad\footnotesize(`Equation (5) holds.' is fine, though.)}\\
+    \st{$x$ fulfills property $\mathcal{P}$.}& \(x\) satisfies property \(\mathcal{P}\). & \emph{\(x\) erfüllt Eigenschaft \(\mathcal{P}\).} \\
+    \st{in average} & on average & \emph{im Durchschnitt}\\
+    \st{estimation} & estimate   & \emph{Abschätzung}\\
+    \st{composed number} & composite number & \emph{zusammengesetzte Zahl}\\
+    \st{with the help of} & using & \emph{mit Hilfe von}\\
+    \st{surely} & clearly & \emph{sicher, bestimmt}\\
+    \st{monotonously increasing} & monotonically incr. & \emph{monoton steigend}\\
+    \multicolumn{3}{l}{\quad\footnotesize(Actually, in most cases `increasing' is just fine.)}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "thesis"
+%%% End:

@@ -1,0 +1,31 @@
+%% Theorem-like environments
+
+%% This can be changed according to language. You can comment out the ones you
+%% don't need.
+
+\numberwithin{equation}{chapter}
+
+%% German theorems
+%\newtheorem{satz}{Satz}[chapter]
+%\newtheorem{beispiel}[satz]{Beispiel}
+%\newtheorem{bemerkung}[satz]{Bemerkung}
+%\newtheorem{korrolar}[satz]{Korrolar}
+%\newtheorem{definition}[satz]{Definition}
+%\newtheorem{lemma}[satz]{Lemma}
+%\newtheorem{proposition}[satz]{Proposition}
+
+%% English variants
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+%% Proof environment with a small square as a "qed" symbol
+\theoremstyle{nonumberplain}
+\theorembodyfont{\normalfont}
+\theoremsymbol{\ensuremath{\square}}
+\newtheorem{proof}{Proof}
+%\newtheorem{beweis}{Beweis}

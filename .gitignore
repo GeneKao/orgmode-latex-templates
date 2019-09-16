@@ -1,6 +1,7 @@
 # latex
 *.bbl
 *blx*
+*thm
 
 
 
