@@ -24,6 +24,8 @@
 #+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
 #+LaTeX_HEADER: \usepackage{hyperref}
 #+LaTeX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{subfig}
 #+LaTeX_HEADER: \usepackage[mla]{ellipsis}
 #+LaTeX_HEADER: \parindent = 0em
 #+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}
@@ -46,6 +48,18 @@ This is an how we can refer to an image, see figure [[fig:leopard-icon]].
 #+NAME:   fig:leopard-icon
 #+ATTR_LATEX: :width 0.4\textwidth :placement
 [[./images/Leopard-ICON-circle.png]]
+
+There are other ways of showing sub-images and display sub-captions like using in latex,
+see figure [[fig:subfig]]
+
+#+caption: figures with captions
+#+NAME:   fig:subfig
+\begin{figure}
+    \centering
+    \subfloat[label 1]{{\includegraphics[width=0.3\textwidth]{./images/Leopard-ICON-circle.png} }}
+    \subfloat[label 2]{{\includegraphics[width=0.3\textwidth]{./images/Leopard-ICON-circle.png} }}
+\end{figure}
+
 
 ** Table
 
