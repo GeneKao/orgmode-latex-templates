@@ -1,4 +1,4 @@
-#+TITLE:     How to write in orgm-ode and export to pdf
+#+TITLE:     How to write in org-mode and export to pdf
 #+SUBTITLE:  simple template
 #+AUTHOR:    Gene Ting-Chun Kao
 #+EMAIL:     kao.gene@gmail.com
