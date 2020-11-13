@@ -1,4 +1,4 @@
-% Created 2019-10-11 Fri 15:46
+% Created 2020-11-14 Sat 00:40
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -34,6 +34,7 @@
 \usepackage{hyperref}
 \usepackage{csquotes}
 \usepackage{graphicx}
+\usepackage{bm}
 \usepackage{subfig}
 \usepackage[mla]{ellipsis}
 \parindent = 0em
@@ -46,7 +47,7 @@
 \linespread{1.1}
 \hypersetup{pdfborder=0 0 0}
 \author{Gene Ting-Chun Kao}
-\date{2019-10-11}
+\date{2020-11-14}
 \title{How to write in org-mode and export to pdf\\\medskip
 \large simple template}
 \hypersetup{
@@ -54,7 +55,7 @@
  pdftitle={How to write in org-mode and export to pdf},
  pdfkeywords={latex, org-mode, writing},
  pdfsubject={my org-mode to latex templates},
- pdfcreator={Emacs 26.3 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 26.3 (Org mode 9.2.6)}, 
  pdflang={English}}
 \begin{document}
 
@@ -62,37 +63,37 @@
 
 
 \section*{Section title}
-\label{sec:org0fa6e45}
+\label{sec:orgaf37fc6}
 
 This is a placeholder for writing contents
 
 
 \subsection*{Image}
-\label{sec:orgf28894a}
+\label{sec:org5e36c51}
 
-This is an how we can refer to an image, see figure \ref{fig:org3408cf4}.
+This is an how we can refer to an image, see figure \ref{fig:org0621bba}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{./images/Leopard-ICON-circle.png}
-\caption{\label{fig:org3408cf4}
+\caption{\label{fig:org0621bba}
 Leopard icon}
 \end{figure}
 
 There are other ways of showing sub-images and display sub-captions like using in latex,
-see figure \ref{org452cabf}
+see figure \ref{orga4b87b2}
 
 \begin{figure}
     \centering
     \subfloat[label 1]{{\includegraphics[width=0.3\textwidth]{./images/Leopard-ICON-circle.png} }}
     \subfloat[label 2]{{\includegraphics[width=0.3\textwidth]{./images/Leopard-ICON-circle.png} }}
-\caption{\label{org452cabf}
+\caption{\label{orga4b87b2}
 figures with captions}
 \end{figure}
 
 
 \subsection*{Table}
-\label{sec:orgabb3a13}
+\label{sec:orgd5eadb3}
 
 \begin{center}
 \begin{tabular}{llr}
@@ -107,24 +108,34 @@ another name &  & 3\\
 
 
 \section*{Section title}
-\label{sec:orgfd946b4}
+\label{sec:orgc3e2a8a}
 
 \subsection*{Mathematics in latex}
-\label{sec:orgefc545b}
+\label{sec:orgb0bf0de}
 
-Check equation \ref{eq:orgfae0362}.
+Check equation \ref{eq:org804b124}.
 
 \begin{equation}
-\label{eq:orgfae0362}
+\label{eq:org804b124}
 f(x) = {s_0} = \frac{{\sum\limits_i {n_i^T(x - {x_i}){\Phi _i}(x)} }}{{\sum\limits_i {{\Phi _i}(x)} }}
 \end{equation}
 
+To have a set of equations and to align them:
 
+\begin{equation}
+\begin{array}{l}
+\begin{split}
+\max \;\;\; {{\bf{c}}^T}{\bf{x}} & \\
+s.t. \;\;\; {\bf{Ax}} & \le {\bf{b}} \\
+{\bf{x}} & \ge {\bf{0}}
+\end{split}
+\end{array}
+\end{equation}
 
 \subsection*{Graph}
-\label{sec:org1b010cd}
+\label{sec:org7b6caa4}
 
-Check out the graph in figure \ref{org618939f}.
+Check out the graph in figure \ref{org8986d38}.
 
 \begin{figure}[H]
 \caption{Max flow min cut, max flow = 19}
@@ -159,12 +170,12 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
     ( [xs=-10] D.west)  -- ( [xs=-10] C.west) -- ( [ys=10] C.north) -- ([ys=20] E.north);
 
 \end{tikzpicture}
-\label{org618939f}
+\label{org8986d38}
 \end{figure}
 
 
 \subsection*{Algorithm}
-\label{sec:orgef3d6bc}
+\label{sec:org6e1cfad}
 
 \begin{algorithm}[H]
 \SetAlgoLined
@@ -181,12 +192,12 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
            Find best condidate from $Q_I$ and $Q_{II}$ and add them to stack $\Omega$
  }
  \caption{How to write algorithms}
-\label{org20c19c2}
+\label{orgfe941b4}
 \end{algorithm}
 
 
 \subsection*{Citation}
-\label{sec:org68a4af0}
+\label{sec:org60766a5}
 
 This is how we can cite paper \cite{kao2017assembly}
 

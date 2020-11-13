@@ -25,6 +25,7 @@
 #+LaTeX_HEADER: \usepackage{hyperref}
 #+LaTeX_HEADER: \usepackage{csquotes}
 #+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{bm}
 #+LATEX_HEADER: \usepackage{subfig}
 #+LaTeX_HEADER: \usepackage[mla]{ellipsis}
 #+LaTeX_HEADER: \parindent = 0em
@@ -82,7 +83,17 @@ Check equation [[eqn:mls]].
 f(x) = {s_0} = \frac{{\sum\limits_i {n_i^T(x - {x_i}){\Phi _i}(x)} }}{{\sum\limits_i {{\Phi _i}(x)} }}
 \end{equation}
 
+To have a set of equations and to align them:
 
+\begin{equation}
+\begin{array}{l}
+\begin{split}
+\max \;\;\; {{\bf{c}}^T}{\bf{x}} & \\
+s.t. \;\;\; {\bf{Ax}} & \le {\bf{b}} \\
+{\bf{x}} & \ge {\bf{0}}
+\end{split}
+\end{array}
+\end{equation}
 
 ** Graph
 
