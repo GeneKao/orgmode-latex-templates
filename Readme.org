@@ -1,3 +1,34 @@
+
+* Emacs Org Mode export to pdf
+
+
+[[https://orgmode.org/][*Emacs Org Mode*]] is a perfect tool to do almost anything! 
+I particularly like its slogan and design concept: [[http://doc.norang.ca/org-mode.html][*Organize Your Life In Plain Text*]]! 
+
+I use Org Mode for many things, which includes writing a to-do list, building a study plan, 
+writing blog posts (including this one), 
+scribbling documents to organise my thoughts (you can also run code in Org Mode, how cool is that!), 
+and planning a research paper. 
+
+I would like to share my .org files with [[https://www.latex-project.org/][LaTex]] starter code and show how I use it to write research documents. 
+Later I export them from .org file to .tex then to .pdf. 
+I like this pipeline because I don't need to worry about the layout while writing. 
+I can also combine many different syntaxes, such as latex in the .org file.
+
+Here are some screenshots: 
+
+.org file 
+#+caption: Leopard icon
+#+NAME:   fig:leopard-icon
+#+ATTR_LATEX: :width 0.4\textwidth :placement
+[[https://github.com/GeneKao/geneatcg/blob/master/content/emacs-org-mode-export-to-pdf/simple-org.png]]
+
+.pdf
+#+caption: Leopard icon
+#+NAME:   fig:leopard-icon
+#+ATTR_LATEX: :width 0.4\textwidth :placement
+[[https://github.com/GeneKao/geneatcg/blob/master/content/emacs-org-mode-export-to-pdf/simple-pdf.png]]
+
 * My org-mode templates for latex-style writing
 
 This repo contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.
