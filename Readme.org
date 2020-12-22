@@ -18,15 +18,9 @@ I can also combine many different syntaxes, such as latex in the .org file.
 Here are some screenshots: 
 
 .org file 
-#+caption: Leopard icon
-#+NAME:   fig:leopard-icon
-#+ATTR_LATEX: :width 0.4\textwidth :placement
 [[https://github.com/GeneKao/geneatcg/blob/master/content/emacs-org-mode-export-to-pdf/simple-org.png]]
 
 .pdf
-#+caption: Leopard icon
-#+NAME:   fig:leopard-icon
-#+ATTR_LATEX: :width 0.4\textwidth :placement
 [[https://github.com/GeneKao/geneatcg/blob/master/content/emacs-org-mode-export-to-pdf/simple-pdf.png]]
 
 * My org-mode templates for latex-style writing
