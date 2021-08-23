@@ -1,4 +1,4 @@
-% Created 2020-11-14 Sat 00:40
+% Created 2021-08-23 Mon 17:56
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -28,8 +28,6 @@
 \usepackage{amsmath}
 \usepackage{arydshln}
 \usepackage{subcaption}
-\usepackage[backend=bibtex,sorting=none]{biblatex}
-\addbibresource{org-bib-refs.bib}
 \newcommand{\point}[1]{\noindent \textbf{#1}}
 \usepackage{hyperref}
 \usepackage{csquotes}
@@ -41,59 +39,52 @@
 \setlength\parskip{.5\baselineskip}
 \usepackage{pgf}
 \usepackage{tikz}
-\usetikzlibrary{arrows,automata, quotes}
+\usetikzlibrary{shapes,arrows,automata,quotes}
 \usepackage[latin1]{inputenc}
+\usepackage{adjustbox}
 
 \linespread{1.1}
 \hypersetup{pdfborder=0 0 0}
 \author{Gene Ting-Chun Kao}
-\date{2020-11-14}
+\date{2021-08-23}
 \title{How to write in org-mode and export to pdf\\\medskip
 \large simple template}
-\hypersetup{
- pdfauthor={Gene Ting-Chun Kao},
- pdftitle={How to write in org-mode and export to pdf},
- pdfkeywords={latex, org-mode, writing},
- pdfsubject={my org-mode to latex templates},
- pdfcreator={Emacs 26.3 (Org mode 9.2.6)}, 
- pdflang={English}}
 \begin{document}
 
 \maketitle
 
 
+
 \section*{Section title}
-\label{sec:orgaf37fc6}
+\label{sec:org8a848e8}
 
 This is a placeholder for writing contents
 
 
 \subsection*{Image}
-\label{sec:org5e36c51}
+\label{sec:orga7f7f86}
 
-This is an how we can refer to an image, see figure \ref{fig:org0621bba}.
+This is an how we can refer to an image, see figure \ref{fig:org57c7ce9}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{./images/Leopard-ICON-circle.png}
-\caption{\label{fig:org0621bba}
-Leopard icon}
+\caption{\label{fig:org57c7ce9}Leopard icon}
 \end{figure}
 
 There are other ways of showing sub-images and display sub-captions like using in latex,
-see figure \ref{orga4b87b2}
+see figure \ref{org42da5b8}
 
 \begin{figure}
     \centering
     \subfloat[label 1]{{\includegraphics[width=0.3\textwidth]{./images/Leopard-ICON-circle.png} }}
     \subfloat[label 2]{{\includegraphics[width=0.3\textwidth]{./images/Leopard-ICON-circle.png} }}
-\caption{\label{orga4b87b2}
-figures with captions}
+\caption{\label{org42da5b8}figures with captions}
 \end{figure}
 
 
 \subsection*{Table}
-\label{sec:orgd5eadb3}
+\label{sec:org5f6b2bf}
 
 \begin{center}
 \begin{tabular}{llr}
@@ -108,15 +99,15 @@ another name &  & 3\\
 
 
 \section*{Section title}
-\label{sec:orgc3e2a8a}
+\label{sec:org7c0a0fb}
 
 \subsection*{Mathematics in latex}
-\label{sec:orgb0bf0de}
+\label{sec:org1d8c8fa}
 
-Check equation \ref{eq:org804b124}.
+Check equation \ref{eq:org616698d}.
 
 \begin{equation}
-\label{eq:org804b124}
+\label{eq:org616698d}
 f(x) = {s_0} = \frac{{\sum\limits_i {n_i^T(x - {x_i}){\Phi _i}(x)} }}{{\sum\limits_i {{\Phi _i}(x)} }}
 \end{equation}
 
@@ -133,9 +124,9 @@ s.t. \;\;\; {\bf{Ax}} & \le {\bf{b}} \\
 \end{equation}
 
 \subsection*{Graph}
-\label{sec:org7b6caa4}
+\label{sec:org03388db}
 
-Check out the graph in figure \ref{org8986d38}.
+Check out the graph in figure \ref{org8d3df96}.
 
 \begin{figure}[H]
 \caption{Max flow min cut, max flow = 19}
@@ -170,12 +161,12 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
     ( [xs=-10] D.west)  -- ( [xs=-10] C.west) -- ( [ys=10] C.north) -- ([ys=20] E.north);
 
 \end{tikzpicture}
-\label{org8986d38}
+\label{org8d3df96}
 \end{figure}
 
 
 \subsection*{Algorithm}
-\label{sec:org6e1cfad}
+\label{sec:org303a68b}
 
 \begin{algorithm}[H]
 \SetAlgoLined
@@ -192,16 +183,71 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
            Find best condidate from $Q_I$ and $Q_{II}$ and add them to stack $\Omega$
  }
  \caption{How to write algorithms}
-\label{orgfe941b4}
+\label{org651b6bd}
 \end{algorithm}
 
+\subsection*{Flowchart}
+\label{sec:org14a3efe}
+
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse, node distance=3cm, fill=red!20, 
+    minimum height=2em]
+\tikzstyle{term} = [draw,
+    rounded rectangle, 
+    minimum width=2.5cm,minimum height=1cm]
+\tikzstyle{io} = [draw,
+    trapezium,
+    trapezium left angle = 65,
+    trapezium right angle = 115,
+    trapezium stretches,
+    text width=5em, text centered]
+
+This flowchart in Fig. \ref{org1a5bba3} is modified from \href{https://texample.net/tikz/examples/simple-flow-chart/}{this latex code}. 
+
+\begin{figure}[htbp]
+\begin{adjustbox}{max width=\columnwidth,center}
+
+\begin{tikzpicture}[node distance = 2cm, auto]
+
+\node [term] (start) {start};
+\node [io, below of=start] (input) {input i/o};
+\node [block, below of=input] (init) {initialize model};
+\node [cloud, left of=init] (expert) {expert};
+\node [cloud, right of=init] (system) {system};
+\node [block, below of=init] (identify) {identify candidate models};
+\node [block, below of=identify] (evaluate) {evaluate candidate models};
+\node [block, left of=evaluate, node distance=3cm] (update) {update model};
+\node [decision, below of=evaluate] (decide) {is best candidate better?};
+\node [term, below of=decide, node distance=3cm] (stop) {stop};
+
+\path [line] (start) -- (input);
+\path [line] (input) -- (init);
+\path [line] (init) -- (identify);
+\path [line] (identify) -- (evaluate);
+\path [line] (evaluate) -- (decide);
+\path [line] (decide) -| node [near start] {yes} (update);
+\path [line] (update) |- (identify);
+\path [line] (decide) -- node {no}(stop);
+\path [line,dashed] (expert) -- (init);
+\path [line,dashed] (system) -- (init);
+\path [line,dashed] (system) |- (evaluate);
+
+\end{tikzpicture}
+\end{adjustbox}
+\caption{This is my flow chart}
+\label{org1a5bba3}
+\end{figure}
 
 \subsection*{Citation}
-\label{sec:org60766a5}
+\label{sec:org81fd0c4}
+
 
 This is how we can cite paper \cite{kao2017assembly}
 
-
-
-\printbibliography
+\bibliographystyle{plain}
+\bibliography{org-bib-refs}
 \end{document}

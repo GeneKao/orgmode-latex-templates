@@ -19,8 +19,6 @@
 #+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage{arydshln}
 #+LATEX_HEADER: \usepackage{subcaption}
-#+LaTeX_HEADER: \usepackage[backend=bibtex,sorting=none]{biblatex}
-#+LATEX_HEADER: \addbibresource{org-bib-refs.bib}
 #+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
 #+LaTeX_HEADER: \usepackage{hyperref}
 #+LaTeX_HEADER: \usepackage{csquotes}
@@ -32,8 +30,10 @@
 #+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}
 #+LaTeX_HEADER: \usepackage{pgf}
 #+LaTeX_HEADER: \usepackage{tikz}
-#+LaTeX_HEADER: \usetikzlibrary{arrows,automata, quotes}
+#+LaTeX_HEADER: \usetikzlibrary{shapes,arrows,automata,quotes}
 #+LaTeX_HEADER: \usepackage[latin1]{inputenc}
+#+LATEX_HEADER: \usepackage{adjustbox}
+
 
 
 * Section title
@@ -157,15 +157,66 @@ every edge quotes/.style = {auto, pos=0.5, % <-- =.3?
  \caption{How to write algorithms}
 \end{algorithm}
 
+** Flowchart
+
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse, node distance=3cm, fill=red!20, 
+    minimum height=2em]
+\tikzstyle{term} = [draw,
+    rounded rectangle, 
+    minimum width=2.5cm,minimum height=1cm]
+\tikzstyle{io} = [draw,
+    trapezium,
+    trapezium left angle = 65,
+    trapezium right angle = 115,
+    trapezium stretches,
+    text width=5em, text centered]
+
+This flowchart in Fig. [[fig:flowchart]] is modified from [[https://texample.net/tikz/examples/simple-flow-chart/][this latex code]]. 
+
+#+NAME: fig:flowchart
+\begin{figure}[htbp]
+\begin{adjustbox}{max width=\columnwidth,center}
+
+\begin{tikzpicture}[node distance = 2cm, auto]
+
+\node [term] (start) {start};
+\node [io, below of=start] (input) {input i/o};
+\node [block, below of=input] (init) {initialize model};
+\node [cloud, left of=init] (expert) {expert};
+\node [cloud, right of=init] (system) {system};
+\node [block, below of=init] (identify) {identify candidate models};
+\node [block, below of=identify] (evaluate) {evaluate candidate models};
+\node [block, left of=evaluate, node distance=3cm] (update) {update model};
+\node [decision, below of=evaluate] (decide) {is best candidate better?};
+\node [term, below of=decide, node distance=3cm] (stop) {stop};
+
+\path [line] (start) -- (input);
+\path [line] (input) -- (init);
+\path [line] (init) -- (identify);
+\path [line] (identify) -- (evaluate);
+\path [line] (evaluate) -- (decide);
+\path [line] (decide) -| node [near start] {yes} (update);
+\path [line] (update) |- (identify);
+\path [line] (decide) -- node {no}(stop);
+\path [line,dashed] (expert) -- (init);
+\path [line,dashed] (system) -- (init);
+\path [line,dashed] (system) |- (evaluate);
+
+\end{tikzpicture}
+\end{adjustbox}
+\caption{This is my flow chart}
+\end{figure}
 
 ** Citation
 
 This is how we can cite paper \cite{kao2017assembly}
 
+#+LATEX: \bibliographystyle{plain}
+#+LATEX: \bibliography{org-bib-refs}
 
 
-#+BEGIN_COMMENT
-References
-#+END_COMMENT
-
-\printbibliography
