@@ -1,0 +1,37 @@
+#+TITLE:     How to write in org-mode and export to pdf in chinese
+#+SUBTITLE:  繁體中文
+#+AUTHOR:    Gene Ting-Chun Kao
+#+EMAIL:     kao.gene@gmail.com
+#+DATE:      {{{time(%Y-%m-%d)}}}
+#+DESCRIPTION: my org-mode to latex templates
+#+KEYWORDS:  latex, org-mode, writing
+#+LANGUAGE:  cn
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t ^:nil _:nil
+#+OPTIONS:   H:3 num:nil
+#+STARTUP:   showall
+#+STARTUP:   align
+#+latex_class: article
+
+#+LaTeX_HEADER: \usepackage{CJKutf8}
+#+LaTeX_HEADER: \begin{CJK*}{UTF8}{bsmi}
+
+
+\begin{CJK*}{UTF8}{bsmi}
+
+
+* 主標題一
+
+** 副標題
+
+中文文本
+
+
+
+
+* 主標題二
+
+
+
+
+\end{CJK*}
+
