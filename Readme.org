@@ -18,10 +18,10 @@ I can also combine many different syntaxes, such as latex in the .org file.
 Here are some screenshots: 
 
 .org file 
-[[https://raw.githubusercontent.com/GeneKao/geneatcg/main/content/emacs-org-mode-export-to-pdf/simple-org.png]]
+[[https://raw.githubusercontent.com/GeneKao/geneatcg/main/content/blog/emacs-org-mode-export-to-pdf/simple-org.png]]
 
 .pdf
-[[https://raw.githubusercontent.com/GeneKao/geneatcg/main/content/emacs-org-mode-export-to-pdf/simple-pdf.png]]
+[[https://raw.githubusercontent.com/GeneKao/geneatcg/main/content/blog/emacs-org-mode-export-to-pdf/simple-pdf.png]]
 
 * My org-mode templates for latex-style writing
 
